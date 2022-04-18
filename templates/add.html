@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+	<script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+
+
+	<div class = "row">
+			<div class = "col-md-12">
+				<h3 class = "add_title"> Add Your Own Destination</h3>
+			</div>
+	</div>
+
+
+	<div class = "row">
+			<div class = "col-md-12" id = "feedback">
+			</div>
+	</div>
+
+
+	<div class = "row content">
+	<div class = "col-md-12">
+		<h5 class = "headline"> Enter the Following Details </h5>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *City: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "city_input" size = "45px" placeholder = "e.g. Mumbai">
+			<div class = "warning" id = "city_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Country: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "country_input" size = "45px" placeholder = "e.g. India">
+			<div class = "warning" id = "country_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Rank of Destination: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "rank_input" size = "45px" placeholder = "e.g. 20">
+			<div class = "warning" id = "rank_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Image Link: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "image_input" size = "45px" placeholder = "e.g. https://e291f1206726d70019.jpg">
+			<div class = "warning" id = "image_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Google Maps Link: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "maps_input" size = "45px" placeholder = "e.g. https://goo.gl/maps/FMxSQvyoYvQ4P5k8A">
+			<div class = "warning" id = "maps_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Fun facts: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "facts_input" size = "45px" placeholder = "e.g. It's like heaven on Earth.">
+			<div class = "warning" id = "facts_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Things To Do: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "things_input" size = "45px" placeholder = "e.g. Dancing, Swimming (separate by commas)">
+			<div class = "warning" id = "things_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Hotels to Stay At: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "hotels_input" size = "45px" placeholder = "e.g. Hilton, Marriot (separate by commas)">
+			<div class = "warning" id = "hotels_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Restaurants to Eat At: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "restaurants_input" size = "45px" placeholder = "e.g. Indian Delight, KFC (separate by commas)">
+			<div class = "warning" id = "restaurants_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Average Temperature in March (F): </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "temperature_input" size = "45px" placeholder = "e.g. 45">
+			<div class = "warning" id = "temperature_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Currency Used: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "currency_input" size = "45px" placeholder = "e.g. Indian Rupee">
+			<div class = "warning" id = "currency_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Travel Requirements: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "requirement_input" size = "45px" placeholder = "e.g. Visa, Passport(separate by commas)">
+			<div class = "warning" class = "warning" id = "requirement_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Destination Type: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "type_input" size = "45px" placeholder = "e.g. Beach/Mountain/City/Village">
+			<div class = "warning" id = "type_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Things Famous For: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "famous_input" size = "45px" placeholder = "e.g. Food, Culture (separate by commas)">
+			<div class = "warning" id = "famous_warning"></div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Cities More Like This: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "more_input" size = "45px" placeholder = "e.g. New York City, Dubai (separate by commas)">
+			<div class = "warning" id = "more_warning"></div>
+		</div>
+	</div>
+	<div class = "row add_submit">
+		<div class = "col-md-12">
+			<button id = "submit_button"> Submit </button>
+		</div>
+	</div>
+</div>
+</div>
+{% endblock %}

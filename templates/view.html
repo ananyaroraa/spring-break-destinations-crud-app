@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'view.js') }}"></script>
+
+<script>
+		let id = {{id|tojson}} 
+		let city = {{city|tojson}}
+</script>
+
+<div class = "col-md-12">
+	<div class = "row view-title">
+		<div class = "col-md-12">
+			<h3 class = "view_title"> {{city.city}}, {{city.country}}</h3>
+		</div>
+	</div>
+
+	<div class = "row image">
+		<div class = "col-md-12">
+			<img src = "{{city.image}}" alt = "{{city.alt_image}}">
+		</div>
+	</div>
+
+	<div class = "row rating">
+		<div class = "col-md-11">
+			<p> <span class = "bold" id = "rating"> US News Spring Break Destination Ranking:</span><span class = "rating_no"> #{{city.rank}}</span></p>
+		</div>
+		<div class = "col-md-1">
+			<button id = "edit_button"> Edit </button>
+		</div>
+	</div>
+
+	<div class = "row">
+
+		<div class = "col-md-8">
+
+			<div class = "row facts">
+				<div class = "col-md-12">
+					<p> <span class = "bold"> Quick Facts:</span> {{city.facts}} </p>
+				</div>
+			</div>
+
+			<div class = "row map_link">
+				<div class = "col-md-12">
+					<p><span class = "bold"> Google Maps Link: </span><a href = {{city.map_link}}>Click here!</a></p>
+				</div>
+			</div>
+
+			<div class = "row things_to_do">
+				<div class = "col-md-12">
+					<p><span class = "bold"> Things to do in {{city.city}}: </span>
+					{% if city.things_to_do|length != 0 %}
+						<ul>
+
+						{%  for thing in city.things_to_do %}
+							<li> {{thing}} </li>
+						{% endfor %}
+
+						</ul>
+
+					{% elif city.things_to_do|length == 0 %}
+						None
+					{% endif %}
+					</p>
+				</div>
+			</div>
+
+			<div class = "row hotels">
+				<div class = "col-md-12">
+					<p><span class = "bold"> Popular hotels to stay in: </span>
+					{% if city.hotels|length != 0 %}
+						<ul>
+
+						{%  for hotel in city.hotels %}
+							<li> {{hotel}} </li>
+						{% endfor %}
+
+						</ul>
+
+					{% elif city.hotels|length == 0 %}
+						None
+					{% endif %}
+					</p>
+				</div>
+			</div>
+
+			<div class = "row restaurants">
+				<div class = "col-md-12">
+					<p><span class = "bold"> Popular restaurants to eat at: </span>
+					{% if city.restaurants|length != 0 %}
+						<ul>
+
+						{%  for restaurant in city.restaurants %}
+							<li> {{restaurant}} </li>
+						{% endfor %}
+
+						</ul>
+
+					{% elif city.restaurants|length == 0 %}
+						None
+					{% endif %}
+					</p>
+				</div>
+			</div>
+
+			<div class = "row temperature">
+				<div class = "col-md-12">
+					<p> <span class = "bold"> Average temperature in March & April (in Fahrenheit):</span>
+					{{city.temperature}}
+					</p>
+				</div>
+			</div>
+
+			<div class = "row currency">
+				<div class = "col-md-12">
+					<p> <span class = "bold"> Currency used in {{city.city}}: </span> {{city.currency}} </p>
+				</div>
+			</div>
+
+			<div class = "row travel_requirements">
+				<div class = "col-md-12">
+					<p><span class = "bold"> Requirements to travel: </span>
+					{% if city.travel_requirements|length != 0 %}
+						<ul>
+							{%  for requirement in city.travel_requirements %}
+								<li> {{requirement}} </li>
+							{% endfor %}
+
+						</ul>
+
+					{% elif city.travel_requirements|length == 0 %}
+						None
+					{% endif %}
+					</p>
+				</div>
+			</div>
+
+		</div>
+		<div class = "col-md-1">
+
+		</div>
+
+		<div class = "col-md-3">
+				<div class = "row sidebar">
+				<div class = "row">
+					<div class = "col-md-12">
+						<p> <span class = "sidebar_bold"> Country: </span><a href = "http://127.0.0.1:5000/search_results/{{city.country}}"> {{city.country}}</a></p>
+					</div>
+				</div>
+				<div class = "row ">
+					<div class = "col-md-12">
+						<p> <span class = "sidebar_bold"> Destination Type: </span><a href = "http://127.0.0.1:5000/search_results/{{city.destination_type}}"> {{city.destination_type}}</a></p>
+					</div>
+				</div>
+				<div class = "row ">
+					<div class = "col-md-12">
+						<p><span class = "sidebar_bold"> More Like This: </span>
+							<ul>
+								{%  for citi in city.more_like_this %}
+									<li> <a href = "http://127.0.0.1:5000/search_results/{{citi}}"> {{citi}}</a></li>
+								{% endfor %}
+
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

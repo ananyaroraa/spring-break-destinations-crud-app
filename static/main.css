@@ -1,0 +1,309 @@
+.navbar{
+
+    background-color: #ffdae9;
+}
+
+.search_button{
+
+    color: white;
+    border-color: white;
+    background-color: black;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    outline:  none;
+}
+
+.search_button:hover{
+
+    background: skyblue;
+    color:  black;
+}
+
+#submit_button{
+
+    color: white;
+    border-color: white;
+    background-color: black;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    outline:  none;
+
+}
+
+#submit_button:hover{
+
+    background: skyblue;
+    color:  black;
+}
+
+#search_bar{
+
+    border-color: black;
+    display: inline;
+}
+
+
+#search_bar::placeholder{
+
+    color: darkgrey;
+}
+
+.title{
+
+    margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#result_number{
+    margin-bottom: 50px;
+}
+
+/*.search_result_number{
+    padding: 0px;
+}*/
+
+.test{
+
+    background-color: blue;
+}
+
+h5{
+
+    font-weight: normal;
+}
+
+a{
+
+    color: black;
+}
+
+.bold{
+
+    font-weight: bold;
+}
+
+img{
+
+    width:  100%;
+    height:  300px;
+
+}
+
+.highlight{ 
+  background:skyblue; 
+  padding:1px; 
+}
+
+.home_title{
+
+    text-align: center !important;
+    padding-bottom: 5px;
+}
+
+a:hover{
+
+    color: skyblue !important;
+}
+
+.home_city{
+
+    font-weight:  bold;
+}
+
+#col0{
+
+    padding: 15px;
+    background-color: whitesmoke;
+    border-color: skyblue;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+#col1{
+
+    padding: 15px;
+    background-color: whitesmoke;
+    border-color: skyblue;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+#col2{
+
+    padding: 15px;
+    background-color: whitesmoke;
+    border-color: skyblue;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.one_liner{
+
+    text-align: center;
+    padding-top: 10px;
+    font-style: italic ;
+    font-weight: normal;
+}
+
+.view_title{
+
+    margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+}
+.search_title{
+
+    margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+}
+.add_title{
+
+    margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+#edit_button{
+
+    color: black;
+    border-color: black;
+    background-color: darkgrey;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    outline:  none;
+    display: inline;
+    align-items: right;
+}
+
+#edit_button:hover{
+
+    background: skyblue;
+    color:  black;
+}
+
+
+
+.rating{
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.rating_no{
+
+    font-size: 20px;
+    color: skyblue;
+}
+.sidebar{
+
+    padding: 15px;
+    background-color: whitesmoke;
+    border-color: skyblue;
+    border-style: solid;
+    border-radius: 20px;
+
+}
+.sidebar_bold{
+
+    font-weight: bold;
+}
+.search_result_title{
+
+    margin-top: 5px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.search_result_number{
+
+    margin-bottom: 5px;
+    color: darkgrey;
+}
+.search_img{
+
+    height: 100px;
+}
+.search_polaroid{
+
+    background-color: whitesmoke;
+    border-style: solid;
+    border: 1px;
+    border-color: black;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-color: skyblue;
+    border-style: solid;
+    border-radius: 20px;
+}
+.content{
+
+    background-color: whitesmoke;
+    border-style: solid;
+    border: 1px;
+    border-color: black;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 40px;
+    border-color: skyblue;
+    border-style: solid;
+    border-radius: 20px;
+    padding-top: 50px;
+
+}
+.add_submit{
+
+    text-align: center;
+    margin-top: 20px;
+}
+.warning{
+
+    color: red;
+    display: inline-block;
+}
+.headline{
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-weight: bold;
+    color: black;
+}
+#feedback{
+
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+
+}
+.buttons_edit{
+
+    margin-top:  30px;
+}
+.button_edit{
+
+    color: white;
+    border-color: white;
+    background-color: black;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    outline:  none;
+
+}
+.button_edit:hover{
+
+    background: skyblue;
+    color:  black;
+
+}

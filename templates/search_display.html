@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'search_display.js') }}"></script>
+
+    
+    <script>
+        let search_term = {{search_term|tojson}}
+        let search_city_result = {{search_city_result|tojson}}
+        let search_city_result_number = {{search_city_result_number|tojson}}
+        let search_country_result = {{search_country_result|tojson}}
+        let search_country_result_number = {{search_country_result_number|tojson}}
+        let search_type_result = {{search_type_result|tojson}}
+        let search_type_result_number = {{search_type_result_number|tojson}}
+    </script>
+
+
+<div class = "row">
+	<div class = "col-md-12">
+		<h3 class = "search_title"> Search Results for "{{search_term}}" </h3>
+	</div>
+</div>
+
+<div class = "row" id = "display_names_city">
+
+</div>
+
+<div class = "row" id = "display_names_country">
+
+</div>
+
+<div class = "row" id = "display_names_type">
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,172 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'edit.js') }}"></script>
+
+<script>
+		let id = {{id|tojson}} 
+		let city = {{city|tojson}}
+		let city_name = "{{city.city}}"
+		let country = "{{city.country}}"
+		let rank = "{{city.rank}}"
+		let image = "{{city.image}}"
+		let map_link = "{{city.map_link}}"
+		let facts = "{{city.facts}}"
+		let things_to_do = "{{city.things_to_do}}"
+		let hotels = "{{city.hotels}}"
+		let restaurants = "{{city.restaurants}}"
+		let temperature = "{{city.temperature}}"
+		let currency = "{{city.currency}}"
+		let travel_requirements = "{{city.travel_requirements}}"
+		let destination_type = "{{city.destination_type}}"
+		let famous_for = "{{city.famous_for}}"
+		let more_like_this = "{{city.more_like_this}}"
+</script>
+
+	<div class = "row">
+			<div class = "col-md-12">
+				<h3 class = "add_title"> Edit a Destination</h3>
+			</div>
+	</div>
+
+	<div class = "row content">
+	<div class = "col-md-12">
+		<h5 class = "headline"> The pre-existing details are populated as shown. Edit them as you like.</h5>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*City: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "city_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Country: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "country_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Rank of Destination: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "rank_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Image Link: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "image_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Google Maps Link: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "maps_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Fun facts: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "facts_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Things To Do: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "things_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Hotels to Stay At: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "hotels_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Restaurants to Eat At: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "restaurants_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label> *Average Temperature in March (F): </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "temperature_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Currency Used: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "currency_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Travel Requirements: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "requirement_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Destination Type: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "type_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Things Famous For: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "famous_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-md-4">
+			<label>*Cities More Like This: </label>
+		</div>
+		<div class = "col-md-4">
+			<input type = "text" id = "more_input" size = "45px">
+		</div>
+	</div>
+	<div class = "row buttons_edit">
+		<div class = "col-md-4"></div>
+		<div class = "col-md-1">
+			<button class = "button_edit" id = "submit_button"> Submit </button>
+		</div>
+		<div class = 'col-md-2'></div>
+		<div class = "col-md-1">
+			<button class = "button_edit" id = "discard_button"> Discard </button>
+		</div>
+		<div class = 'col-md-4'></div>
+	</div>
+	<div id="dialog" style="display: none" align = "center">
+		Are you sure you want to discard your changes?
+		<div><button id = "yes_discard">Yes</button>
+		<button id = "no_discard">No</button></div>
+	</div>
+
+{% endblock %}
