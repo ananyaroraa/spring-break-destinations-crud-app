@@ -1,4 +1,4 @@
-# Spring Break Destinations Search App
+# Spring Break Destinations CRUD Application
 
 An application that allows you to view, add, edit, and search through popular spring break destinations. Inspired by U.S. News Travel website. 
 
